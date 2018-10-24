@@ -12,7 +12,7 @@ public class HelloWorldController {
 
     @RequestMapping("/hello")
     public String hello(){
-        return "hello world version 4";
+        return "hello world version 4 ";
     }
 
 }
