@@ -15,4 +15,9 @@ public class HelloWorldController {
         return "hello world version 4.3";
     }
 
+    @RequestMapping("/hello2")
+    public String hello2(){
+        return "hello world 2";
+    }
+
 }
