@@ -12,7 +12,7 @@ public class HelloWorldController {
 
     @RequestMapping("/hello")
     public String hello(){
-        return "hello world version 4.4 from docker container of 9000 port v 3.0";
+        return "hello world version 4.4 from docker container of 9000 port v 3.1";
     }
 
     @RequestMapping("/hello2")
