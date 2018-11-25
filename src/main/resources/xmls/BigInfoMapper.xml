@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fuzamei.mapper.BigInfoMapper">
+
+    <insert id="insertUsers" parameterType="java.util.List">
+
+        insert into user (username, password, age, sex, money, occupation, person_name, ctime, utime)
+        values
+        <foreach collection="list" separator="," item="user">
+            (#{user.username},#{user.password},#{user.age},#{user.sex},#{user.money},#{user.occupation},#{user.personName},#{user.ctime},#{user.utime})
+        </foreach>
+
+    </insert>
+
+</mapper>

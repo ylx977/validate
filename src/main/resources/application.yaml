@@ -1,2 +1,35 @@
 server:
   port: 9000
+
+spring:
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+      force-response: true
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://172.16.100.14:3306/biginfo?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&allowMultiQueries=true&useSSL=false
+    hikari:
+      connection-test-query: select 'x'
+      read-only: false
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      maximum-pool-size: 20
+      minimum-idle: 20
+      username: root
+      password: W%e>=&QhO87p
+      driver-class-name: com.mysql.jdbc.Driver
+
+#Mybatis
+mybatis:
+  mapper-locations: /xmls/*.xml
+  configuration:
+    call-setters-on-nulls: true
+    cache-enabled: false
+    use-generated-keys: true
+    use-column-label: true
+    map-underscore-to-camel-case: true
+    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
