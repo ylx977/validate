@@ -22,8 +22,3 @@ spring:
       username: ENC(e6sv/26jmy7h6iRCPtDHow==)
       password: ENC(P18uB80ni2aDo9N6L4wcweNmoOF5Sbw2)
       driver-class-name: com.mysql.jdbc.Driver
-
-#jasypt加密的密匙
-jasypt:
-  encryptor:
-    password: EbfYkitulv73I2p0mXI50JMXoaxZTKJ7

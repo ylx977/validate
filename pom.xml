@@ -147,7 +147,7 @@
 					<!-- 详见：https://github.com/spotify/docker-maven-plugin    Invalid repository name ... only [a-z0-9-_.] are allowed-->
 					<imageName>boot-validate</imageName>
 					<baseImage>frolvlad/alpine-oraclejdk8:slim</baseImage>
-					<entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
+					<entryPoint>["java",-Dfile.encoding=UTF8,"-Djasypt.encryptor.password=${JASYPT_PASSWORD}", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
 					<resources>
 						<resource>
 							<targetPath>/</targetPath>
