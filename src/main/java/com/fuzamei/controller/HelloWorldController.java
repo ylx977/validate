@@ -2,6 +2,7 @@ package com.fuzamei.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.fuzamei.pojo.BeanBO;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,9 +15,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/hello")
 public class HelloWorldController {
 
+    @Value("${server.port}")
+    private String port;
+
     @RequestMapping("/hello")
     public String hello(){
-        return "hello world version 4.4 from docker container of 9000 port v 3.3";
+        return "hello world version 4.4 from docker container of "+port+" port v 3.3";
     }
 
     @RequestMapping("/hello2")
