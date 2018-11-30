@@ -21,7 +21,7 @@ mybatis:
     map-underscore-to-camel-case: true
     #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
-##jasypt加密的密匙
-#jasypt:
-#  encryptor:
-#    password: EbfYkitulv73I2p0mXI50JMXoaxZTKJ7
+#jasypt加密的密匙
+jasypt:
+  encryptor:
+    password: EbfYkitulv73I2p0mXI50JMXoaxZTKJ7
