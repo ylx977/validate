@@ -41,6 +41,13 @@ public class HelloWorldController {
         return JSON.toJSONString(beanBO);
     }
 
+    @CrossOrigin
+    @RequestMapping("/helloInterceptor2")
+    public String helloInterceptor2(){
+        int i = 1/0;
+        return "helloInterceptor2";
+    }
+
     public static void main(String[] args) {
         BeanBO beanBO = new BeanBO();
         beanBO.setM1(111);

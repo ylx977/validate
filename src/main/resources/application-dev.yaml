@@ -1,0 +1,29 @@
+server:
+  port: 9000
+
+spring:
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+      force-response: true
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: ENC(41J6I8wsW8JhkBWjn3H3DlTTet5Hi9OWct1NJEhCthwRXQd8AkWQ5tRiFtq3oZqdkOYBiPMpiSc6i5UgsaSA58fJtzl9LLLNtz3UlxfW3Z1DdEJAZWppXyXafEpK5aCeEC36TeGubl72/VwgrluVoiOindT+7VrWqlQzZyrieY7cqRv7imF5h68JLJN30x9d9O0cXL1+t1gRjpWxDzhGQRdrtUz2PZVW)
+    hikari:
+      connection-test-query: select 'x'
+      read-only: false
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      maximum-pool-size: 20
+      minimum-idle: 20
+      username: ENC(e6sv/26jmy7h6iRCPtDHow==)
+      password: ENC(P18uB80ni2aDo9N6L4wcweNmoOF5Sbw2)
+      driver-class-name: com.mysql.jdbc.Driver
+
+#jasypt加密的密匙
+jasypt:
+  encryptor:
+    password: EbfYkitulv73I2p0mXI50JMXoaxZTKJ7
