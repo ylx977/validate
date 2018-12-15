@@ -80,9 +80,10 @@ public class ValidateController {
     @ApiOperation(value = "校验方法5的value",notes = "校验方法4的note(加了自定义注解)")
     @RequestMapping(value="/v5",method= RequestMethod.POST,consumes= MediaType.APPLICATION_JSON_VALUE)
     public String validate5(@Validated @RequestBody BeanCustom beanCustom){
-        System.out.println(beanCustom.getBook());
+//        System.out.println(beanCustom.getBook());
         return "success";
     }
+
 
 
     @CrossOrigin

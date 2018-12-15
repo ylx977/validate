@@ -22,3 +22,13 @@ spring:
       username: ENC(e6sv/26jmy7h6iRCPtDHow==)
       password: ENC(P18uB80ni2aDo9N6L4wcweNmoOF5Sbw2)
       driver-class-name: com.mysql.jdbc.Driver
+  redis:
+      host: 172.16.100.67
+      password: 123456
+      database: 0
+      port: 6379
+      lettuce:
+        pool:
+          max-idle: 20
+          min-idle: 20
+          max-active: 20
