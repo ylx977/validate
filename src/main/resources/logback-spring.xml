@@ -66,7 +66,7 @@ debug:当此属性设置为true时，将打印出logback内部日志信息，实
         <!--滚动策略，按照时间滚动 TimeBasedRollingPolicy-->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--文件路径,定义了日志的切分方式——把每一天的日志归档到一个文件中,以防止日志填满整个磁盘空间-->
-            <FileNamePattern>${log.path}/debug-%d{yyyy-MM-dd}.%i.log</FileNamePattern>
+            <FileNamePattern>${log.path}/DATE-%d{yyyy-MM-dd,aux}/debug-%d{yyyy-MM-dd}.%i.log</FileNamePattern>
             <!--只保留最近10天的日志-->
             <maxHistory>10</maxHistory>
             <!--用来指定日志文件的上限大小，那么到了这个值，就会删除旧的日志,但是必须在pattern中不能有%i出现，因为这个是要配合timeBasedFileNamingAndTriggeringPolicy使用的-->
@@ -96,7 +96,7 @@ debug:当此属性设置为true时，将打印出logback内部日志信息，实
         <!--滚动策略，按照时间滚动 TimeBasedRollingPolicy-->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--文件路径,定义了日志的切分方式——把每一天的日志归档到一个文件中,以防止日志填满整个磁盘空间-->
-            <FileNamePattern>${log.path}/info-%d{yyyy-MM-dd}.%i.log</FileNamePattern>
+            <FileNamePattern>${log.path}/DATE-%d{yyyy-MM-dd,aux}/info-%d{yyyy-MM-dd}.%i.log</FileNamePattern>
             <!--只保留最近10天的日志-->
             <maxHistory>10</maxHistory>
             <!--用来指定日志文件的上限大小，那么到了这个值，就会删除旧的日志,但是必须在pattern中不能有%i出现，因为这个是要配合timeBasedFileNamingAndTriggeringPolicy使用的-->
@@ -125,7 +125,7 @@ debug:当此属性设置为true时，将打印出logback内部日志信息，实
         <!--滚动策略，按照时间滚动 TimeBasedRollingPolicy-->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--文件路径,定义了日志的切分方式——把每一天的日志归档到一个文件中,以防止日志填满整个磁盘空间-->
-            <FileNamePattern>${log.path}/warn-%d{yyyy-MM-dd}.%i.log</FileNamePattern>
+            <FileNamePattern>${log.path}/DATE-%d{yyyy-MM-dd,aux}/warn-%d{yyyy-MM-dd}.%i.log</FileNamePattern>
             <!--只保留最近10天的日志-->
             <maxHistory>10</maxHistory>
             <!--用来指定日志文件的上限大小，那么到了这个值，就会删除旧的日志,但是必须在pattern中不能有%i出现，因为这个是要配合timeBasedFileNamingAndTriggeringPolicy使用的-->
@@ -154,7 +154,7 @@ debug:当此属性设置为true时，将打印出logback内部日志信息，实
         <!--滚动策略，按照时间滚动 TimeBasedRollingPolicy-->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--文件路径,定义了日志的切分方式——把每一天的日志归档到一个文件中,以防止日志填满整个磁盘空间-->
-            <FileNamePattern>${log.path}/error-%d{yyyy-MM-dd}.%i.log</FileNamePattern>
+            <FileNamePattern>${log.path}/DATE-%d{yyyy-MM-dd,aux}/error-%d{yyyy-MM-dd}.%i.log</FileNamePattern>
             <!--只保留最近10天的日志-->
             <maxHistory>10</maxHistory>
             <!--用来指定日志文件的上限大小，那么到了这个值，就会删除旧的日志,但是必须在pattern中不能有%i出现，因为这个是要配合timeBasedFileNamingAndTriggeringPolicy使用的-->
@@ -188,9 +188,9 @@ debug:当此属性设置为true时，将打印出logback内部日志信息，实
         <logger name="org.springframework.web" level="info"/>
         <logger name="org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor" level="INFO"/>
     -->
-    <logger name="com.fuzamei" level="TRACE" additivity="false">
-        <appender-ref ref="consoleLog" />
-    </logger>
+    <!--<logger name="com.fuzamei" level="TRACE" additivity="false">-->
+        <!--<appender-ref ref="consoleLog" />-->
+    <!--</logger>-->
 
 
     <!--
